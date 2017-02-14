@@ -8,4 +8,4 @@ let data = {
 new Vue({
     el: '#root',
     data: data
-})
+});
