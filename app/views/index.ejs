@@ -1,13 +1,10 @@
 <% include partials/header %>
 
     <main>
-        <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
-        </div>
-        
-        <div id="root">
-            <input type="text" id="input" v-model="message">
+        <div id="app">
+            <h1>{{ message }}</h1>
+            
+            <input v-model="message">
         </div>
     </main>
 
