@@ -46,16 +46,19 @@ app.use(expressValidator({
 
 // use res.render to load up an ejs view file
 
-// index page 
+// index page
 app.get('/', function(req, res) {
     res.render('index');
 });
 
-// about page 
+// about page
 app.get('/about', function(req, res) {
     res.render('about');
 });
-
+let axios = require('axios')
 app.listen(32000, function(){
-    console.log('Server Started on Port 32000...');
+	axios.get('http://canihazip.com/s')
+	.then(response => {
+        console.log('Server Started: http://' + response.data +':32000...');
+	})
 });
