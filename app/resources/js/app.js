@@ -3,6 +3,27 @@ window.$ = require('jquery');
 require('bootstrap');
 
 //Global Vue Component
+Vue.component('task-list', {
+    template: `
+        <div>
+            <task v-for="task in tasks">{{task.description}}</task>
+        </div>
+    `,
+    
+    data() {
+        return {
+            tasks: [
+                {description: 'Do some stuff', completed: true},
+                {description: 'Do the art', completed: false},
+                {description: 'Do the science', completed: true},
+                {description: 'Do the sex', completed: false},
+                {description: 'Do the sleep', completed: true},
+            ]
+        };
+    }
+});
+
+//Global Vue Component
 Vue.component('task', {
     template: '<li><slot></slot></li>'
 });
@@ -11,13 +32,13 @@ new Vue({
     el: '#app',
     
     data: {
-        tasks: [
-            {description: 'Do some stuff', completed: true},
-            {description: 'Do the art', completed: false},
-            {description: 'Do the science', completed: true},
-            {description: 'Do the sex', completed: false},
-            {description: 'Do the sleep', completed: true},
-            ],
+        // tasks: [
+        //     {description: 'Do some stuff', completed: true},
+        //     {description: 'Do the art', completed: false},
+        //     {description: 'Do the science', completed: true},
+        //     {description: 'Do the sex', completed: false},
+        //     {description: 'Do the sleep', completed: true},
+        //     ],
             
         newName: '',
         names: ['Matt', 'Alyssa', 'Taylor', 'Austin'],
