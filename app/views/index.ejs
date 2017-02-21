@@ -2,9 +2,12 @@
 
     <main>
         <div id="app">
-            <h1>{{ message }}</h1>
+            <ul>
+            <li v-for='name in names'>{{name }}</li>
+            </ul>
             
-            <input v-model="message">
+            <input id="input" type="text" v-model="newName">
+            <button @click="addName" :title="title">Add Name</button>
         </div>
     </main>
 

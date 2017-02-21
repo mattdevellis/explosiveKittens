@@ -10303,9 +10303,22 @@ __webpack_require__(3);
 
 new Vue({
     el: '#app',
+
     data: {
-        message: 'Hello World'
+        newName: '',
+        names: ['Matt', 'Alyssa', 'Taylor', 'Austin'],
+
+        title: 'Now the title is being set through JavaScript'
+    },
+
+    methods: {
+        addName: function addName() {
+            this.names.push(this.newName);
+
+            this.newName = '';
+        }
     }
+
 });
 
 /***/ }),
