@@ -2,6 +2,24 @@
 
     <main>
         <div id="app">
+            <!-- Computed Tasks -->
+            <h2>All Tasks</h2>
+            <ul>
+                <li v-for="task in tasks" v-text="task.description"></li>
+            </ul>
+            
+             <h2>Incomplete Tasks</h2>
+            <ul>
+                <li v-for="task in incompleteTasks" v-text="task.description"></li>
+            </ul>
+            
+             <h2>Complete Tasks</h2>
+            <ul>
+                <li v-for="task in completeTasks" v-text="task.description"></li>
+            </ul>
+        
+            <!-- Dynamically linked array -->
+            <h1>Dynamically Linked Array</h1>
             <ul>
             <li v-for='name in names'>{{name }}</li>
             </ul>

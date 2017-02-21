@@ -10305,12 +10305,29 @@ new Vue({
     el: '#app',
 
     data: {
+        tasks: [{ description: 'Do some stuff', completed: true }, { description: 'Do the art', completed: false }, { description: 'Do the science', completed: true }, { description: 'Do the sex', completed: false }, { description: 'Do the sleep', completed: true }],
+
         newName: '',
         names: ['Matt', 'Alyssa', 'Taylor', 'Austin'],
 
         title: 'Now the title is being set through JavaScript'
     },
 
+    computed: {
+        incompleteTasks: function incompleteTasks() {
+            return this.tasks.filter(function (task) {
+                return !task.completed;
+            });
+        },
+        completeTasks: function completeTasks() {
+            return this.tasks.filter(function (task) {
+                return task.completed;
+            });
+        }
+    },
+
+    //always only nest custom methods
+    //within this methods object.
     methods: {
         addName: function addName() {
             this.names.push(this.newName);
