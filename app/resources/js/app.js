@@ -3,69 +3,36 @@ window.$ = require('jquery');
 require('bootstrap');
 
 //Global Vue Component
-Vue.component('task-list', {
-    template: `
-        <div>
-            <task v-for="task in tasks">{{task.description}}</task>
-        </div>
-    `,
+Vue.component('message', {
+    
+    props: ['title', 'body'],
     
     data() {
         return {
-            tasks: [
-                {description: 'Do some stuff', completed: true},
-                {description: 'Do the art', completed: false},
-                {description: 'Do the science', completed: true},
-                {description: 'Do the sex', completed: false},
-                {description: 'Do the sleep', completed: true},
-            ]
+            isVisible: true
         };
-    }
-});
-
-//Global Vue Component
-Vue.component('task', {
-    template: '<li><slot></slot></li>'
-});
-
-new Vue({
-    el: '#app',
+    },
     
-    data: {
-        // tasks: [
-        //     {description: 'Do some stuff', completed: true},
-        //     {description: 'Do the art', completed: false},
-        //     {description: 'Do the science', completed: true},
-        //     {description: 'Do the sex', completed: false},
-        //     {description: 'Do the sleep', completed: true},
-        //     ],
+    template: `
+        <div class="panel panel-default" v-show="isVisible">
+            <div class="panel-heading">
+                {{title}}
+            <button type="button" class="btn btn-default" @click="hideModal">Hide</button>
             
-        newName: '',
-        names: ['Matt', 'Alyssa', 'Taylor', 'Austin'],
-        
-        title: 'Now the title is being set through JavaScript'
-    },
+            <div class="panel-body">
+                {{body}}
+            </div>
+            
+        </div>
+    `,
     
-    computed: {
-        
-        incompleteTasks() {
-            return this.tasks.filter(task => !task.completed);
-        },
-        
-        completeTasks() {
-            return this.tasks.filter(task => task.completed);
-        }
-        
-    },
-    
-    //always only nest custom methods
-    //within this methods object.
     methods: {
-      addName() {
-          this.names.push(this.newName);
-          
-          this.newName='';
-      }
+        hideModal() {
+            this.isVisible = false;
+        }
     }
-    
 });
+    
+    new Vue({
+        el: '#app'
+    });

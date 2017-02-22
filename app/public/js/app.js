@@ -10301,41 +10301,29 @@ var Vue = __webpack_require__(17);
 window.$ = __webpack_require__(0);
 __webpack_require__(3);
 
-new Vue({
-    el: '#app',
+//Global Vue Component
+Vue.component('message', {
 
-    data: {
-        tasks: [{ description: 'Do some stuff', completed: true }, { description: 'Do the art', completed: false }, { description: 'Do the science', completed: true }, { description: 'Do the sex', completed: false }, { description: 'Do the sleep', completed: true }],
+    props: ['title', 'body'],
 
-        newName: '',
-        names: ['Matt', 'Alyssa', 'Taylor', 'Austin'],
-
-        title: 'Now the title is being set through JavaScript'
+    data: function data() {
+        return {
+            isVisible: true
+        };
     },
 
-    computed: {
-        incompleteTasks: function incompleteTasks() {
-            return this.tasks.filter(function (task) {
-                return !task.completed;
-            });
-        },
-        completeTasks: function completeTasks() {
-            return this.tasks.filter(function (task) {
-                return task.completed;
-            });
-        }
-    },
 
-    //always only nest custom methods
-    //within this methods object.
+    template: '\n        <div class="panel panel-default" v-show="isVisible">\n            <div class="panel-heading">\n                {{title}}\n            <button type="button" class="btn btn-default" @click="hideModal">Hide</button>\n            \n            <div class="panel-body">\n                {{body}}\n            </div>\n            \n        </div>\n    ',
+
     methods: {
-        addName: function addName() {
-            this.names.push(this.newName);
-
-            this.newName = '';
+        hideModal: function hideModal() {
+            this.isVisible = false;
         }
     }
+});
 
+new Vue({
+    el: '#app'
 });
 
 /***/ }),
