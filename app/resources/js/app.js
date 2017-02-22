@@ -2,37 +2,41 @@ let Vue = require('vue');
 window.$ = require('jquery');
 require('bootstrap');
 
-//Global Vue Component
-Vue.component('message', {
-    
-    props: ['title', 'body'],
-    
-    data() {
-        return {
-            isVisible: true
-        };
-    },
-    
+Vue.component( {
     template: `
-        <div class="panel panel-default" v-show="isVisible">
-            <div class="panel-heading">
-                {{title}}
-            <button type="button" class="btn btn-default" @click="hideModal">Hide</button>
-            
-            <div class="panel-body">
-                {{body}}
+        <div>
+            <div class='tabs'>
+                <ul class="nav nav-pills">
+                    <li v-for="tab in tabs">{{ tab.name }}</li>
+                </ul>
             </div>
             
+            <div class="tab-details">
+                <slot></slot>
+            </div>
         </div>
     `,
     
-    methods: {
-        hideModal() {
-            this.isVisible = false;
-        }
+    created() {
+        this.tabs = this.$children;
+    }
+    
+    data() {
+        return { tabs: [] };
+    
+    
+});
+
+Vue.component('tab', {
+    template: `
+        <div><slot></slot></div>
+    `,
+    
+    props: {
+        name: { required: true}
     }
 });
-    
-    new Vue({
-        el: '#app'
-    });
+
+new Vue({
+    el: '#app'
+});
