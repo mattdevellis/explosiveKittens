@@ -10302,7 +10302,7 @@ window.$ = __webpack_require__(0);
 __webpack_require__(3);
 
 Vue.component('tabs', {
-    template: '\n        <div>\n            <div class=\'tabs\'>\n                <ul class="nav nav-pills">\n                    <li v-for="tab in tabs" :class="{ \'is-active\': tab.isActive }">\n                        <a href="#" @click="selectTab(tab)">{{ tab.name }}</a>\n                    </li>\n                </ul>\n            </div>\n            \n            <div class="tab-details">\n                <slot></slot>\n            </div>\n        </div>\n    ',
+    template: '\n        <div>\n            <div class=\'tabs\'>\n                <ul class="nav nav-pills">\n                    <li v-for="tab in tabs" :class="{ \'is-active\': tab.isActive }">\n                        <a :href="tab.href" @click="selectTab(tab)">{{ tab.name }}</a>\n                    </li>\n                </ul>\n            </div>\n            \n            <div class="tab-details">\n                <slot></slot>\n            </div>\n        </div>\n    ',
 
     created: function created() {
         this.tabs = this.$children;
@@ -10323,7 +10323,7 @@ Vue.component('tabs', {
 });
 
 Vue.component('tab', {
-    template: '\n        <div><slot></slot></div>\n    ',
+    template: '\n        <div v-show="isActive"><slot></slot></div>\n    ',
 
     props: {
         name: { required: true },
@@ -10335,6 +10335,14 @@ Vue.component('tab', {
             isActive: false
         };
     },
+
+
+    computer: {
+        href: function href() {
+            return '#' + this.name.toLowerCase().replace(/ /g, '-');
+        }
+    },
+
     mounted: function mounted() {
         this.isActive = this.selected;
     }
