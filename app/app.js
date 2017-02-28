@@ -55,10 +55,10 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('about');
 });
-let axios = require('axios')
+let axios = require('axios');
 app.listen(32000, function(){
 	axios.get('http://canihazip.com/s')
 	.then(response => {
         console.log('Server Started: http://' + response.data +':32000...');
-	})
+	});
 });
