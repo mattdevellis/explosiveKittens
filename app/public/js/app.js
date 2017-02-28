@@ -10304,7 +10304,7 @@ __webpack_require__(4);
 
 window.Event = new Vue();
 
-Vue.component('tab', __webpack_require__(20));
+Vue.component('jumbo', __webpack_require__(20));
 
 new Vue({
     el: '#app'
@@ -10322,6 +10322,19 @@ new Vue({
 /* 3 */
 /***/ (function(module, exports) {
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -12794,7 +12807,7 @@ exports = module.exports = __webpack_require__(18)();
 
 
 // module
-exports.push([module.i, "\nh3[data-v-546647d1] {\n    font-size: 200px;\n}\n", ""]);
+exports.push([module.i, "\n.jumbotron[data-v-454c3f68] {\n    margin: -40px;\n}\nh1[data-v-454c3f68] {\n}\np[data-v-454c3f68] {\n}\n", ""]);
 
 // exports
 
@@ -13055,13 +13068,13 @@ var Component = __webpack_require__(21)(
   /* template */
   __webpack_require__(22),
   /* scopeId */
-  "data-v-546647d1",
+  "data-v-454c3f68",
   /* cssModules */
   null
 )
-Component.options.__file = "/home/mattdevellis/src/explosiveKittens/app/resources/js/Tab.vue"
+Component.options.__file = "/home/mattdevellis/src/explosiveKittens/app/resources/js/Jumbotron.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Tab.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Jumbotron.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -13070,9 +13083,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-546647d1", Component.options)
+    hotAPI.createRecord("data-v-454c3f68", Component.options)
   } else {
-    hotAPI.reload("data-v-546647d1", Component.options)
+    hotAPI.reload("data-v-454c3f68", Component.options)
   }
 })()}
 
@@ -13137,13 +13150,17 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._t("default")], 2)
+  return _c('div', [_c('div', {
+    staticClass: "jumbotron text-center"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_vm._t("heading"), _vm._v(" "), _vm._t("content")], 2)])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-546647d1", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-454c3f68", module.exports)
   }
 }
 
@@ -13158,13 +13175,13 @@ var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(24)("38b2b9e2", content, false);
+var update = __webpack_require__(24)("718d2ec1", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-546647d1&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Tab.vue", function() {
-     var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-546647d1&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Tab.vue");
+   module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-454c3f68&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Jumbotron.vue", function() {
+     var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-454c3f68&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Jumbotron.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

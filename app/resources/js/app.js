@@ -5,7 +5,8 @@ require('bootstrap');
 
 window.Event = new Vue();
 
-Vue.component('tab', require('./Tab.vue'));
+Vue.component('jumbo', require('./Jumbotron.vue'));
+
 
 new Vue({
     el: '#app',
