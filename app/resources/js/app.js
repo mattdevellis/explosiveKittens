@@ -5,8 +5,7 @@ require('bootstrap');
 
 window.Event = new Vue();
 
-Vue.component('jumbo', require('./Jumbotron.vue'));
-
+//Vue.component('navigation', require('./Navigation.vue'));
 
 new Vue({
     el: '#app',
