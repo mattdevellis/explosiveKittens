@@ -1,5 +1,12 @@
-<script src='/js/app.js'></script>
-
 </div>
+<script src='/js/app.js'></script>
+<script> 
+    $('.navbar a').click(function(e) {
+        e.preventDefault()
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href')).offset().top-60
+        }, 500);
+    })
+</script>
 </body>
 </html>

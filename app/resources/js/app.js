@@ -1,7 +1,8 @@
+((window) => {
 let Vue = require('vue');
 window.$ = window.jQuery = require('jquery');
 
-require('bootstrap');
+require('bootstrap-sass');
 
 window.Event = new Vue();
 
@@ -11,3 +12,4 @@ new Vue({
     el: '#app',
     
 });
+})(window)
