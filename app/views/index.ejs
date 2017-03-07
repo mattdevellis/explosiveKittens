@@ -12,19 +12,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#home">Home</a>
+                <a class="navbar-brand" href="#home"><i class="fa fa-home" aria-hidden="true">Home</i></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about"><i class="fa fa-user-circle" aria-hidden="true">About</i></a>
                     </li>
                     <li>
-                        <a href="#skills">Skillz</a>
+                        <a href="#skills"><i class="fa fa-code" aria-hidden="true">Skillz</i></a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact"><i class="fa fa-address-book" aria-hidden="true">Contact</i></a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
         <div class="headline">
             <div class="container">
                 <h1>Matthew Devellis</h1>
-                <hr class="featurette-divider"></hr>
+                <hr class="featurette-divider">
                 <h2>Data - Development - Design</h2>
             </div>
         </div>
@@ -45,51 +45,65 @@
 
     <!-- Page Content -->
     <div class="container">
-
         <hr class="featurette-divider">
-
+        
         <!-- First Featurette -->
+        
         <div class="featurette" id="about" data-offset="50">
-            <img class="featurette-image img-circle img-responsive pull-right" src="https://source.unsplash.com/sm3Ub_IJKQg/500x500">
-            <h2 class="featurette-heading">#about:
-                <span class="text-muted">Who am I?</span>
-            </h2>
-            <p class="lead">I am many different things. Mostly odd. However, I can do some stuff with programming. Which is nice.</p>
+            <div class="col-md-6">
+                <img class="featurette-image img-rectangle img-responsive" src="https://source.unsplash.com/sm3Ub_IJKQg/500x500">
+            </div>
+            
+            <div class="col-md-6">
+                <h2 class="featurette-heading">#about:
+                    <span class="text-muted">Who am I?</span>
+                </h2>
+                <p class="lead">
+                    <kbd>I am</kbd> many different things. Mostly <kbd>odd</kbd>. However, 
+                    I can do some stuff with programming. Which is <kbd>nice</kbd>.
+                </p>
+                <p class="lead">
+                    I am <kbd>a recent college graduate</kbd>. I have worked in many
+                    different professions.
+                </p>
+                <p class="lead">
+                    I have some experience as <kbd>a programmer</kbd>. Although
+                    <kbd>somewhat experienced</kbd>, I did manage to develop
+                    this website (almost) completely on my own.
+                </p>
+                
+            </div>
+           
         </div>
 
         <hr class="featurette-divider">
 
         <!-- Second Featurette -->
         <div class="featurette" id="skills">
-            <img class="featurette-image img-circle img-responsive pull-left" src="https://source.unsplash.com/p-xSl33Wxyc/500x500">
-            <h2 class="featurette-heading">#skillz:
+            <div class="col-md-6">
+                <img class="featurette-image img-rectangle img-responsive" src="https://source.unsplash.com/p-xSl33Wxyc/500x500">
+            </div>
+            <div class="col-md-6">
+                 <h2 class="featurette-heading">#skillz:
                 <span class="text-muted">What can I do?</span>
             </h2>
-            <p class="lead"></p>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Third Featurette -->
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-right" src="https://source.unsplash.com/DfMMzzi3rmg/500x500">
-            <h2 class="featurette-heading">#contact-info:
-                <span class="text-muted">How do you get in touch with me?</span>
-            </h2>
+            <p class="lead">
+                I have various experience in several different areas of both software development, 
+                as well as web development. Take a look below to see the various things I have experience with.
+            </p>
             
-            <div class="col-md-4">
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Collapsible Group Item #1
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Frameworks
                         </a>
                       </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          
                       </div>
                     </div>
                   </div>
@@ -98,29 +112,28 @@
                     <div class="panel-heading" role="tab" id="headingTwo">
                       <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Collapsible Group Item #2
+                          IDE's
                         </a>
                       </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                       <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        
                       </div>
                     </div>
                   </div>
-                  
                   
                   <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingThree">
                       <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Collapsible Group Item #3
+                          Languages
                         </a>
                       </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                       <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        
                       </div>
                     </div>
                   </div>
@@ -130,14 +143,57 @@
 
         <hr class="featurette-divider">
 
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+            <div class="col-md-6">
+               <img class="featurette-image img-rectangle img-responsive" src="https://source.unsplash.com/DfMMzzi3rmg/500x500"> 
+            </div>
+            <div class="col-md-6">
+                 <h2 class="featurette-heading">#contact-info:
+                <span class="text-muted">How do you get in touch with me?</span>
+            </h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                <h4>Email</h4>
+                <p>
+                   Feel free to email me at any time, day or night:
+                </p>
+                </li>
+                <li class="list-group-item">
+                <h4>LinkedIn</h4>
+                <p>
+                    
+                </p>
+                </li>
+                <li class="list-group-item">
+                <h4>GitHub</h4>
+                <p>
+                    
+                </p>
+                </li>
+                <li class="list-group-item">
+                <h4>Codepen</h4>
+                <p>
+                    
+                </p>
+                </li>
+            </ul>
+                
+            </div>
+           
+        </div>
+
+        <hr class="featurette-divider">
+        </div>
+        
+
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy;  2017</p>
+                    <p class="text-center">Copyright &copy;  2017</p>
                 </div>
             </div>
         </footer>
-
     </div>
 <% include partials/footer %>

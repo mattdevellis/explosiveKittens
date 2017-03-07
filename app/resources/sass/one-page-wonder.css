@@ -58,6 +58,25 @@ body {
     font-size: 50px;
 }
 
+.email-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.linkedin-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.codepen-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.codepen-header > .pull-left,
+.email-header > .pull-left,
+.linkedin-header > .pull-left
+
 footer {
     margin: 50px 0;
 }
@@ -102,7 +121,7 @@ footer {
     }
 
     .featurette-image {
-        max-width: 50%;
+        max-width: 100%;
     }
 
     .featurette-image.pull-left {
