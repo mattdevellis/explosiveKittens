@@ -63,66 +63,11 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, $) {(function (window) {
-	var Vue = __webpack_require__(5);
-	window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(2);
-
-	__webpack_require__(3);
-
-	window.Event = new Vue();
-
-	//Vue.component('navigation', require('./Navigation.vue'));
-
-	$('.navbar a').click(function (e) {
-		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top - 60
-		}, 500);
-	});
-})(window);
-
-if ($(window).width() > 767) {
-	$('.service').mouseenter(function (e) {
-		$(this).find('img').animate({ paddingBottom: "15px" }, 500);
-	});
-
-	$('.service').mouseleave(function (e) {
-		$(this).find('img').stop().animate({ paddingBottom: "0px" }, 500);
-	});
-}
-
-if ($(window).width() > 767) {
-	$('.scrollpoint.sp-effect1').waypoint(function () {
-		$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');
-	}, { offset: '90%' });
-	$('.scrollpoint.sp-effect2').waypoint(function () {
-		$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');
-	}, { offset: '90%' });
-	$('.scrollpoint.sp-effect3').waypoint(function () {
-		$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');
-	}, { offset: '90%' });
-	$('.scrollpoint.sp-effect4').waypoint(function () {
-		$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');
-	}, { offset: '70%' });
-}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(0);
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10349,7 +10294,34 @@ return jQuery;
 
 
 /***/ }),
-/* 3 */
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, $) {
+var Vue = __webpack_require__(4);
+window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
+
+__webpack_require__(2);
+
+window.Event = new Vue();
+
+//Vue.component('navigation', require('./Navigation.vue'));
+
+$(window).ready(function () {
+    $('.navbar a').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 60
+        }, 500);
+    });
+
+    $('.fadeInObject #headerName').fadeIn(2000);
+    $('.fadeInObject #headerDDD').fadeIn(4000);
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -12730,10 +12702,10 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -12919,7 +12891,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21492,10 +21464,10 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(5)))
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 var g;
@@ -21519,6 +21491,13 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
 
 
 /***/ })

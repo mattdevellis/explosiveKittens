@@ -58,33 +58,6 @@ body {
     font-size: 50px;
 }
 
-.email-header {
-  font-size: 18px;
-  padding: 0;
-}
-
-.linkedin-header {
-  font-size: 18px;
-  padding: 0;
-}
-
-.codepen-header {
-  font-size: 18px;
-  padding: 0;
-}
-
-.codepen-header > .pull-left,
-.email-header > .pull-left,
-.linkedin-header > .pull-left
-
-.scrollpoint {
-	opacity:0;
-}
-
-.scrollpoint.active {
-	opacity:1;
-}
-
 footer {
     margin: 50px 0;
 }
@@ -171,10 +144,6 @@ footer {
     .featurette-divider {
         margin: 30px 0;
     }
-    
-    	.scrollpoint {
-		opacity:1;
-	}
 }
 
 @media(max-width:640px) {
@@ -210,3 +179,37 @@ footer {
         margin-left: 0;
     }
 }
+
+#collapseTwo ul.list-group {
+    padding-top: 20px;
+}
+
+#collapseThree ul.list-group .list-group-item{
+    padding-top: 20px;
+}
+
+.email-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.linkedin-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.codepen-header {
+  font-size: 18px;
+  padding: 0;
+}
+
+.codepen-header > .pull-left,
+.email-header > .pull-left,
+.linkedin-header > .pull-left{
+    
+}
+
+#headerName #headerDDD .fadeInObject{
+    display: none;
+}
+
