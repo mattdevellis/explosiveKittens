@@ -10299,15 +10299,24 @@ return jQuery;
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, $) {
 var Vue = __webpack_require__(4);
+
 window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
 
-__webpack_require__(2);
+window.$ = window.Bootstrap_SCSS = __webpack_require__(2);
+
+window.$ = window.Animate = __webpack_require__(7);
 
 window.Event = new Vue();
 
 //Vue.component('navigation', require('./Navigation.vue'));
 
 $(window).ready(function () {
+    //     $("a.scroll[href^='#']").on('click', function(e) {
+    // 		e.preventDefault();
+    // 		var hash = this.hash;
+    // 		$('html, body').animate({ scrollTop: $(this.hash).offset().top}, 1000, function(){window.location.hash = hash;});
+    // 	});
+
     $('.navbar a').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
@@ -10315,8 +10324,23 @@ $(window).ready(function () {
         }, 500);
     });
 
-    $('.fadeInObject #headerName').fadeIn(2000);
-    $('.fadeInObject #headerDDD').fadeIn(4000);
+    $('.h1.scrollpoint.sp-effect3').fadeIn(2000);
+    $('.h2.scrollpoint.sp-effect3').fadeIn(4000);
+
+    if ($(window).width() > 767) {
+        $('.scrollpoint.sp-effect1').waypoint(function () {
+            $(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');
+        }, { offset: '90%' });
+        $('.scrollpoint.sp-effect2').waypoint(function () {
+            $(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');
+        }, { offset: '90%' });
+        $('.scrollpoint.sp-effect3').waypoint(function () {
+            $(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');
+        }, { offset: '90%' });
+        $('.scrollpoint.sp-effect4').waypoint(function () {
+            $(this).toggleClass('active');$(this).toggleClass('animated fadeIn');
+        }, { offset: '70%' });
+    }
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
@@ -21498,6 +21522,116 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var raf = __webpack_require__(9)
+
+var Animate = function(frame, fps) {
+  if (!(this instanceof Animate)) {
+    return new Animate(frame, fps)
+  }
+
+  this.id = null
+  this.now = null
+  this.then = +new Date
+  this.delta = null
+  this.frame = frame
+  this.interval = 1000 / fps
+  this.start = this.start.bind(this)
+
+  this.start()
+}
+
+Animate.prototype.pause = function() {
+  raf.cancel(this.id)
+  this.id = null  
+  return this
+}
+
+Animate.prototype.resume = function() {
+  if (this.id == null) {
+    this.start()
+  }
+
+  return this
+}
+
+Animate.prototype.start = function() {
+  this.id = raf(this.start)
+
+  this.now = +new Date
+  this.delta = this.now - this.then
+
+  if (this.delta < this.interval) {
+    return
+  }
+
+  this.frame()
+  this.then = this.now - (this.delta % this.interval)
+}
+
+module.exports = Animate
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== "undefined") {
+    module.exports = window;
+} else if (typeof global !== "undefined") {
+    module.exports = global;
+} else if (typeof self !== "undefined"){
+    module.exports = self;
+} else {
+    module.exports = {};
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(8)
+
+/**
+ * `requestAnimationFrame()`
+ */
+
+var request = global.requestAnimationFrame
+  || global.webkitRequestAnimationFrame
+  || global.mozRequestAnimationFrame
+  || fallback
+
+var prev = +new Date
+function fallback (fn) {
+  var curr = +new Date
+  var ms = Math.max(0, 16 - (curr - prev))
+  var req = setTimeout(fn, ms)
+  return prev = curr, req
+}
+
+/**
+ * `cancelAnimationFrame()`
+ */
+
+var cancel = global.cancelAnimationFrame
+  || global.webkitCancelAnimationFrame
+  || global.mozCancelAnimationFrame
+  || clearTimeout
+
+if (Function.prototype.bind) {
+  request = request.bind(global)
+  cancel = cancel.bind(global)
+}
+
+exports = module.exports = request
+exports.cancel = cancel
 
 
 /***/ })

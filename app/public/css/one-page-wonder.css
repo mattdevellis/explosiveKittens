@@ -46,14 +46,6 @@ body {
     overflow: hidden;
 }
 
-.featurette-image.pull-left {
-    margin-right: 40px;
-}
-
-.featurette-image.pull-right {
-    margin-left: 40px;
-}
-
 .featurette-heading {
     font-size: 50px;
 }
@@ -209,7 +201,22 @@ footer {
     
 }
 
-#headerName #headerDDD .fadeInObject{
+.fadeObject{
     display: none;
 }
 
+a,
+a:focus,
+a:hover {
+	outline:0 none;
+	text-decoration:none;
+	transition-duration:0.4s; 
+}
+
+.scrollpoint {
+	opacity:0;
+}
+
+.scrollpoint.active {
+	opacity:1;
+}
