@@ -202,14 +202,3 @@ footer {
   font-size: 18px;
   padding: 0;
 }
-
-.codepen-header > .pull-left,
-.email-header > .pull-left,
-.linkedin-header > .pull-left{
-    
-}
-
-.fadeInObject{
-    display: none;
-}
-

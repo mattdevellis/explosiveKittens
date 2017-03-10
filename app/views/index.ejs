@@ -11,19 +11,19 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#home"><i class="fa fa-home" aria-hidden="true">Home</i></a>
+               <a class="navbar-brand" href="#home">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav">
                   <li>
-                     <a href="#about"><i class="fa fa-user-circle" aria-hidden="true">About</i></a>
+                     <a href="#about">About</a>
                   </li>
                   <li>
-                     <a href="#skills"><i class="fa fa-code" aria-hidden="true">Skillz</i></a>
+                     <a href="#skills">Skillz</a>
                   </li>
                   <li>
-                     <a href="#contact"><i class="fa fa-address-book" aria-hidden="true">Contact</i></a>
+                     <a href="#contact">Contact</a>
                   </li>
                </ul>
             </div>
@@ -35,22 +35,22 @@
       <header class="header-image img-responsive" id="home">
          <div class="headline">
             <div class="container">
-               <h1 class="scrollpoint sp-effect3 active animated fadeInDown">Matthew Devellis</h1>
-               <hr class="featurette-divider scrollpoint sp-effect3 active animated fadeInDown">
-               <h2 class="scrollpoint scrollpoint sp-effect3 active animated fadeInDown">Data - Development - Design</h2>
+                <h1>Matthew Devellis</h1>
+                <hr class="featurette-divider">
+                <h2>Data - Development - Design</h2>
             </div>
          </div>
       </header>
       <!-- Page Content -->
       <div class="container">
-         <hr class="featurette-divider">
+         <hr class="featurette-divider" id="about">
          <!-- First Featurette -->
-         <div class="featurette" id="about">
+         <div class="featurette" >
             <div class="col-md-8 col-md-offset-2">
-               <h2 class="featurette-heading">#about:
+               <h2 class="featurette-heading"><i class="fa fa-user-circle" aria-hidden="true"></i> 
                   <span class="text-muted">Who am I?</span>
                </h2>
-               <p class="lead">
+               <p class="lead animated fadeInRight">
                   <kbd>I am</kbd> many different things. Mostly <kbd>odd</kbd>. However, 
                   I can do some stuff with programming. Which is <kbd>nice</kbd>.
                </p>
@@ -65,11 +65,11 @@
                </p>
             </div>
          </div>
-         <hr class="featurette-divider">
+         <hr class="featurette-divider" id="skills">
          <!-- Second Featurette -->
-         <div class="featurette" id="skills">
+         <div class="featurette" >
               <div class="col-md-8 col-md-offset-2">
-            <h2 class="featurette-heading">#skillz:
+            <h2 class="featurette-heading"><i class="fa fa-code" aria-hidden="true"></i> 
                <span class="text-muted">What can I do?</span>
             </h2>
             <p class="lead">
@@ -104,14 +104,15 @@
                      <div class="panel-body">
                         I have just recently started working in the field of web development. Most of my prior experience
                         is based in software development with compiled languages. I am familiar with the following:
-                        <ul class="list-group">
-                           <li class="list-group-item">Microsoft Visual Studio</li>
-                           <li class="list-group-item">Intellij</li>
-                           <li class="list-group-item">Bloodshed for C++</li>
-                           <li class="list-group-item">Codepen</li>
-                           <li class="list-group-item">Koding</li>
-                           <li class="list-group-item">Codenvy</li>
-                           <li class="list-group-item">Command Line</li>
+                        <br/>
+                        <ul class="list-group text-center">
+                           <li class="list-group-item animated lightSpeedIn">Microsoft Visual Studio</li>
+                           <li class="list-group-item animated ">Intellij</li>
+                           <li class="list-group-item animated ">Bloodshed for C++</li>
+                           <li class="list-group-item animated ">Codepen</li>
+                           <li class="list-group-item animated ">Koding</li>
+                           <li class="list-group-item animated ">Codenvy</li>
+                           <li class="list-group-item animated ">Command Line</li>
                         </ul>
                      </div>
                   </div>
@@ -128,6 +129,7 @@
                      <div class="panel-body">
                         To reiterate, most of my experiences with developing any kind of software are with compiled
                         languages. Here are some things I know:
+                        <br/>
                         <ul class="list-group">
                            <li class="list-group-item">
                               <div class="progress">
@@ -178,37 +180,46 @@
             </div>
          </div>
       </div>
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="contact">
       <!-- Third Featurette -->
-      <div class="featurette" id="contact">
+      <div class="featurette" >
          <div class="col-md-8 col-md-offset-2">
-            <h2 class="featurette-heading">#contact-info:
-               <span class="text-muted">How do you get in touch with me?</span>
+            <h2 class="featurette-heading">
+                <i class="fa fa-address-book" aria-hidden="true"></i>
+               <span class="text-muted"> How do you get in touch with me?</span>
             </h2>
-            <ul class="list-group">
+            <ul class="list-group text-center">
                <li class="list-group-item">
-                  <h4>Email</h4>
+                  <div class="email-header">
+                      <h4><i class="fa fa-envelope" aria-hidden="true"></i> Email</h4>
+                  </div>
                   <p>
                      Feel free to email me at any time, day or night:
-                  </p>
+                    </p>
                </li>
                <li class="list-group-item">
-                  <h4>LinkedIn</h4>
+                  <div class="linkedin-header">
+                      <h4><i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="https://www.linkedin.com/in/matthew-devellis-97876b129/"> LinkedIn</a></h4>
+                  </div>
                   <p>
                      Connect with me on LinkedIn!
-                  </p>
+                   </p>
                </li>
                <li class="list-group-item">
-                  <h4>GitHub</h4>
+                  <div class="github-header">
+                      <h4><i class="fa fa-github" aria-hidden="true"></i> GitHub</h4>
+                  </div>
                   <p>
                      Check out some of the repos I have made!
                   </p>
                </li>
                <li class="list-group-item">
-                  <h4>Codepen</h4>
+                  <div class="codepen-header">
+                      <h4><i class="fa fa-codepen" aria-hidden="true"></i> Codepen</h4>
+                  </div>
                   <p>
                      Check out some of my other front end projects!
-                  </p>
+                 </p>
                </li>
             </ul>
          </div>

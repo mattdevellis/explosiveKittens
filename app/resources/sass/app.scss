@@ -1,0 +1,25 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.fadeObject{
+    display: none;
+}
+
+.sr {
+    visibility: hidden;
+}
+
+.navbar {
+    font-family: $font-family-sans-serif;
+}
+
+html, body, #app, #about, #skills, #contact{
+    height: 100%;
+}
+    

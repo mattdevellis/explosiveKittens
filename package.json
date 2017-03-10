@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate": "^1.0.0",
     "axios": "^0.15.3",
     "body-parser": "^1.16.0",
     "bootstrap-sass": "^3.3.7",
@@ -22,8 +23,7 @@
     "jquery": "^3.1.1",
     "jquery.easing": "^1.4.1",
     "laravel-mix": "^0.7.4",
-    "modernizr": "^3.3.1",
-    "vue": "^2.1.10",
-    "waypoints": "^4.0.1"
+    "scrollreveal": "^3.3.4",
+    "vue": "^2.1.10"
   }
 }
