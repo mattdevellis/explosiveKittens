@@ -26,15 +26,28 @@ $(window).ready(function(){
     
     sr.reveal('.headline', {
         reset: true,
-        duration: 1000,
+        duration: 1500,
         delay: 50
     });
     
+    
+    
     sr.reveal('.featurette', {
         reset: true, 
-        duration: 1000,
+        duration: 1500,
         viewOffset: { top: 60 },
         delay: 50
     });
+    
+    $.fn.extend({
+        animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
+    
+	$('#ide').animateCss('lightSpeedIn');
     
 });
